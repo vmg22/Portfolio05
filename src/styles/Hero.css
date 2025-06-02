@@ -1,0 +1,28 @@
+.hero-container {
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: space-between; /* espacio entre texto e imagen */
+  padding: 2rem;
+  gap: 2rem; /* espacio entre texto e imagen */
+}
+
+.hero-text {
+  flex: auto; /* ocupa el espacio necesario */
+  max-width: 700px; /* ancho máximo del texto */        
+    font-size: 1.2rem; /* tamaño de fuente */
+  text-align: left;
+}
+
+.hero-image {
+  flex: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  opacity: 0.9; 
+  /* opcional: bordes redondeados */
+}

@@ -1,0 +1,16 @@
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000000;
+  color: #A5ABAF;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #D64218;
+}
