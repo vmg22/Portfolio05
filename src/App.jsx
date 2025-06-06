@@ -1,21 +1,20 @@
-import  React  from  'react' ; 
-import {   BrowserRouter  as  Router ,   Route ,   Link } from  'react-router-dom' 
-import "flowbite";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
-import { Routes } from "react-router-dom";  
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Error from "./pages/Error";
 import useStore from './store/UseStore';
 
 
 function App() {
+  const { isDarkMode } = useStore();
 
- const { isDarkMode , toggleDarkMode } = useStore();
   return (
-<div className={isDarkMode ? 'dark bg-black text-white' : 'bg-white text-black'}>
-    <button onClick={toggleDarkMode}>{isDarkMode ? 'claro' : 'oscuro'}</button>
+    <div className={isDarkMode ? 'dark bg-black text-white min-h-screen' : 'bg-white text-black min-h-screen'}>
       <Router>
+         {/* <-- movido aquí */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMe />} />

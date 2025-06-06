@@ -89,7 +89,7 @@ const Skills = () => {
               className="d-flex flex-column align-items-center mx-auto"
               style={{
                 backdropFilter: 'blur(30px)',
-                background: 'rgba(55, 17, 141, 0.1)',
+                background: 'rgba(0, 0, 0, 0.1)',
                 boxShadow: '0px 0px 12px rgba(227, 228, 237, 0.37)',
                 border: '1.5px solid rgba(255, 255, 255, 0.18)',
                 padding: '1rem 1.5rem',
@@ -99,7 +99,7 @@ const Skills = () => {
             >
               <div>{tech.icon}</div>
               <h5 className="mt-3">{tech.name}</h5>
-              <p className="w-75 mx-auto" style={{ color: "rgba(227, 228, 237, 0.37)" }}>{tech.description}</p>
+              <p className="w-75 mx-auto" style={{ color: "rgba(82, 95, 218, 0.94)" }}>{tech.description}</p>
             </div>
           </Carousel.Item>
         ))}
