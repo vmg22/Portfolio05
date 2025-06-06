@@ -2,14 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { FaGithub, FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa'
 import { SiTiktok } from 'react-icons/si'
 
 // Contenedor principal del footer
 const FooterContainer = styled(motion.footer)`
-  position: auto;
-  bottom: 0;
-  left: 0;
   width: 100%;
   z-index: 100;
 
@@ -27,7 +24,7 @@ const FooterContainer = styled(motion.footer)`
 const FooterLink = styled(Link)`
   position: relative;
   cursor: pointer;
-  color: #efefee;
+  color:rgb(194, 194, 39);
   font-size: 18px;
   padding: 0.3rem 0.8rem;
   transition: color 0.25s;
@@ -59,10 +56,11 @@ const FooterLink = styled(Link)`
 
 // Íconos sociales visibles solo en mobile
 const IconLink = styled.a`
-  color: #efefee;
-  font-size: 20px;
+  color: rgb(202, 70, 17);
+  font-size: 40px;
   transition: transform 0.3s ease;
-  display: none;
+  margin: 0 10px;
+  text-decoration: none;
 
   &:hover {
     transform: scale(1.2);
@@ -91,21 +89,28 @@ const Footer = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
-      <FooterLink to="/privacy">Privacidad</FooterLink>
-      <FooterLink to="/terms">Términos</FooterLink>
-      <FooterLink to="/contact">Contacto</FooterLink>
+      <IconLink
+        href="mailto:victormatiasgarnica@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Gmail"
+        aria-label="Gmail"
+      >
+        <FaEnvelope />
+      </IconLink>
 
       <IconLink
-        href="https://github.com/tuusuario"
+        href="https://github.com/vmg22"
         target="_blank"
         rel="noopener noreferrer"
         title="GitHub"
+        aria-label="GitHub"
       >
         <FaGithub />
       </IconLink>
 
       <IconLink
-        href="https://instagram.com/tuusuario"
+        href="https://instagram.com/matiasgarnicaok22?igsh=NW1mZGY5djRyZDJ3"
         target="_blank"
         rel="noopener noreferrer"
         title="Instagram"
@@ -123,7 +128,7 @@ const Footer = () => {
       </IconLink>
 
       <IconLink
-        href="https://wa.me/1234567890"
+        href="https://wa.me/543814759359"
         target="_blank"
         rel="noopener noreferrer"
         title="WhatsApp"
@@ -131,7 +136,7 @@ const Footer = () => {
         <FaWhatsapp />
       </IconLink>
 
-      <Copyright>© {year} TuNombre</Copyright>
+      <Copyright>© {year} MatiasDev</Copyright>
     </FooterContainer>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { FaHome, FaUser, FaFolderOpen, FaEnvelope } from 'react-icons/fa'
 
 const Nav = styled(motion.nav)`
   width: fit-content;
@@ -10,12 +11,9 @@ const Nav = styled(motion.nav)`
   align-items: center;
   gap: 30px;
   justify-content: center;
- 
-
   backdrop-filter: blur(30px);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  // background: rgba(255, 255, 255, 0.1);
+  // border: 1.5px solid rgba(255, 255, 255, 0.18);
   padding: 1rem 15rem;
   border-radius: 12px;
 `
@@ -23,7 +21,7 @@ const Nav = styled(motion.nav)`
 const StyledLink = styled(Link)`
   position: relative;
   cursor: pointer;
-  color: #efefee;
+  color:rgb(202, 70, 17);
   font-size: 28px;
   padding: 0.5rem 1rem;
   transition: color 0.25s;
@@ -56,9 +54,10 @@ const NavBar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
-      <StyledLink to="/about">Sobre mí</StyledLink>
-      <StyledLink to="/projects">Proyectos</StyledLink>
-      <StyledLink to="/contact">Contacto</StyledLink>
+      <StyledLink to="/" title="Inicio"><FaHome /></StyledLink>
+      <StyledLink to="/about" title="Sobre mí"><FaUser /></StyledLink>
+      <StyledLink to="/projects" title="Proyectos"><FaFolderOpen /></StyledLink>
+      <StyledLink to="/contact" title="Contacto"><FaEnvelope /></StyledLink>
     </Nav>
   )
 }

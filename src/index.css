@@ -4,13 +4,23 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #000000;
+  background-color: #ffffff;
   color: #A5ABAF;
   margin: 0;
   padding: 0;
 }
 
+body.dark {
+  background: #181818;
+  color: #fff;
+}
+
 h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #D64218;
+}
+
+.className {
   font-family: 'Oswald', sans-serif;
   color: #D64218;
 }

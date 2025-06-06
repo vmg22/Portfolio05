@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import '../styles/home.css'
 import Hero from './home/Hero'
 import Skills from './home/Skills'
-import Experience from './home/Experience'
+
 
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
 
       <Header/>
       <Hero/>
-      <Experience/>
+      
       <Skills/>
      
       <Footer/>
@@ -22,3 +22,4 @@ const Home = () => {
 }
 
 export default Home
+  
