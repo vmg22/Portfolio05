@@ -1,125 +1,98 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import styled from 'styled-components';
+import React from 'react'
+import { motion } from 'framer-motion'
+import biblioteca from '../assets/biblioteca.jpg'
+import sandwicheria from '../assets/sandwicheria.jpg'
+import geogenio from '../assets/geogenio.jpg'
+import portfolio from '../assets/porfolio.jpg'
+import productos from '../assets/productos.jpg'
+import lenguages from '../assets/lenguages.jpg'
 
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import CardActionArea from '@mui/material/CardActionArea';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
-
-const PageWrapper = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-`;
-
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1rem;
-  flex: 1;
-`;
-
-const Content = styled.div`
-  margin-bottom: 3rem;
-
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-`;
+const projects = [
+{
+title: 'Portfolio Personal',
+description: 'Sitio web para mostrar habilidades y proyectos como desarrollador frontend.',
+image: portfolio,
+liveLink: 'https://miportfolio.com',
+githubLink: 'https://github.com/vmg22/Portfolio05.git',
+},
+{
+title: 'Burguer App',
+description: 'Aplicación de pedidos de hamburguesas con carrito de compras y pago en línea.',
+image: sandwicheria,
+liveLink: 'https://mitienda.com',
+githubLink: 'https://github.com/vmg22/Pag-Burguer.git',
+},
+{
+title: 'Pag Lenguajes de Programación',
+description: 'Página informativa sobre lenguajes de programación populares con recursos y tutoriales.',
+image: lenguages,
+liveLink: 'https://dashboardadmin.com',
+githubLink: 'https://github.com/vmg22/Lenguajes-prog.git',
+},
+{
+title: 'GeoGenio',
+description: 'Aplicación de geografía para aprender sobre países, capitales y datos geográficos.',
+image: geogenio,
+liveLink: 'https://apptareas.com',
+githubLink: 'https://github.com/vmg22/geoGebra.git',
+},
+{
+title: 'Biblioteca',
+description: 'Aplicación de biblioteca para gestionar libros y préstamos.',
+image: biblioteca,
+liveLink: 'https://blogtecnico.com',
+githubLink: 'https://github.com/vmg22/AGENDA-TEL.git',
+},
+{
+title: 'Inventario',
+description: 'Aplicación de inventario para gestionar productos y stock.',
+image: productos,
+liveLink: 'https://blogtecnico.com',
+githubLink: 'https://github.com/vmg22/AGENDA-TEL.git',
+},
+]
 
 const Projects = () => {
-  const projectList = [
-    {
-      title: 'Portfolio Personal',
-      description: 'Sitio web para mostrar habilidades y proyectos como desarrollador frontend.',
-      image: '/images/portfolio.jpg',
-      liveLink: 'https://miportfolio.com',
-      githubLink: 'https://github.com/vmg22/Portfolio05.git',
-    },
-    {
-      title: 'Burguer App',
-      description: 'Aplicación de pedidos de hamburguesas con carrito de compras y pago en línea.',
-      image: '/images/shop.jpg',
-      liveLink: 'https://mitienda.com',
-      githubLink: 'https://github.com/vmg22/Pag-Burguer.git',
-    },
-    {
-      title: 'Pag Lenguajes de Programación',
-      description: 'Página informativa sobre lenguajes de programación populares con recursos y tutoriales.',
-      image: '/images/dashboard.jpg',
-      liveLink: 'https://dashboardadmin.com',
-      githubLink: 'https://github.com/vmg22/Lenguajes-prog.git',
-    },
-    {
-      title: 'GeoGebra',
-      description: 'Aplicación de matemáticas interactivas para aprender geometría, álgebra y cálculo.',  
-      image: '/images/todo.jpg',
-      liveLink: 'https://apptareas.com',
-      githubLink: 'https://github.com/vmg22/geoGebra.git',
-    },
-    {
-      title: 'Agenda Tel',
-      description: 'Aplicación de agenda telefónica para gestionar contactos con búsqueda y filtrado.',
-      image: '/images/blog.jpg',
-      liveLink: 'https://blogtecnico.com',
-      githubLink: 'https://github.com/vmg22/AGENDA-TEL.git',
-    },
-  ];
+return (
+<section className="min-h-screen bg-white dark:bg-black text-black dark:text-white py-16 px-4">
+<div className="max-w-6xl mx-auto">
+<h2 className="text-4xl font-bold mb-10 text-center">Proyectos</h2>
+<div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+{projects.map((project, index) => (
+<motion.div bg-white dark:bg-black
+key={index}
 
-  return (
-    <PageWrapper>
-      
-      <Container>
-        
+initial={{ opacity: 0, y: 40 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ duration: 0.5, delay: index * 0.1 }}
+whileHover={{ scale: 1.03 }}
+className="flex flex-col items-center  mx-auto w-full max-w-sm p-6 rounded-xl 
+            bg-white dark:bg-zinc-900 border  border-zinc-200 dark:border-zinc-700 
+            shadow-lg dark:shadow-zinc-800 transition"
+style={{
+boxShadow: '0px 0px 12px rgba(227, 228, 237, 0.37)',
+}}
+>
+<img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded-md mb-4 bg-orange-200" />
+<h3 className="text-xl font-semibold mb-2 text-center">{project.title}</h3>
+<p className="text-sm text-gray-700 dark:text-gray-300 text-center mb-4">
+{project.description}
+</p>
+<div className="flex justify-between w-full mt-auto bg-white/10 dark:bg-black/20 p-4 rounded-b-md">
+<a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline" >
+Demo
+</a>
+<a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-pink-500 dark:text-pink-400 hover:underline" >
+Código
+</a>
+</div>
+</motion.div>
+))}
+</div>
+</div>
+</section>
+)
+}
 
-        <Grid container spacing={4}>
-          {projectList.map((project, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <Card sx={{ maxWidth: 345, height: '100%', display: 'flex', flexDirection: 'column' }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="160"
-                    image={project.image}
-                    alt={project.title}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h6" component="div">
-                      {project.title}
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      {project.description}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions sx={{ mt: 'auto', justifyContent: 'space-between', paddingX: 2 }}>
-                  <Button size="small" color="primary" href={project.liveLink} target="_blank">
-                    Demo
-                  </Button>
-                  <Button size="small" color="secondary" href={project.githubLink} target="_blank">
-                    Código
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    
-    </PageWrapper>
-  );
-};
-
-export default Projects;
+export default Projects

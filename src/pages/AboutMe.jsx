@@ -4,6 +4,9 @@ import styled from "styled-components";
 import Footer from "../components/Footer";
 import Skills from "../pages/home/Skills"
 
+
+
+
 const Container = styled.div`
   max-width: 800px;
   margin: 0 auto;
@@ -21,6 +24,7 @@ const Content = styled.div`
   p {
     margin-bottom: 1rem;
     line-height: 1.6;
+    style={{ color: "rgba(156, 156, 156, 0.945)" }};
   }
 `;
 
@@ -30,19 +34,19 @@ const AboutMe = () => {
       <Header />
       <Container>
         <Content>
-          <h1>Sobre mí</h1>
-          <p>
+          <h1 style={{ color: "#D64218" }}>Sobre mí</h1>
+          <p style={{ color: "rgba(156, 156, 156, 0.945)" }}>
             Soy un desarrollador web apasionado por crear experiencias digitales
             únicas. Me especializo en React y tengo experiencia en el desarrollo
             de aplicaciones web modernas y responsivas.
           </p>
-          <p>
+          <p style={{ color: "rgba(156, 156, 156, 0.945)" }}>
             Me encanta aprender nuevas tecnologías y siempre estoy buscando
             mejorar mis habilidades. En mi tiempo libre, disfruto contribuir a
             proyectos de código abierto y explorar nuevas tendencias en el mundo
             del desarrollo web.
           </p>
-          <p>
+          <p style={{ color: "rgba(156, 156, 156, 0.945)" }}>
             Si quieres saber más sobre mis proyectos o colaborar, ¡no dudes en
             contactarme!
           </p>

@@ -1,18 +1,16 @@
-@import "flowbite/src/themes/default";
-@plugin "flowbite/plugin";
-@source "../node_modules/flowbite";
+@import "flowbite/src/themes/default.css";
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: #A5ABAF;
+  background-color: rgba(156, 156, 156, 0.945);
+  color: #0099ff;
   margin: 0;
   padding: 0;
 }
 
 body.dark {
   background: #181818;
-  color: #fff;
+  color: #c0c0c0;
 }
 
 h1, h2, h3 {

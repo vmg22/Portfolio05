@@ -6,7 +6,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import useStore from './store/UseStore';
-
+import Header from './components/Header'; // <-- importante
 
 function App() {
   const { isDarkMode } = useStore();
