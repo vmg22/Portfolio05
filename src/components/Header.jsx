@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./NavBar";
 import useStore from "../store/UseStore";
 
+
 import Switch from "@mui/material/Switch";
 import { FormControlLabel } from "@mui/material";
 
@@ -9,12 +10,13 @@ const Header = () => {
   const { isDarkMode, toggleDarkMode } = useStore();
 
   return (
-    <header className="flex items-center justify-between px-4 py-3 border-b border-gray-300 dark:border-gray-700">
-      <div>
-        <NavBar />
+    <header className="flex justify-between items-center ">
+      <div className="m-4"> </div>
+      <div >
+        <NavBar  />
       </div>
 
-      <div>
+      <div >
         <FormControlLabel
           control={
             <Switch

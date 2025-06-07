@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import styled from 'styled-components'
 import Footer from '../components/Footer'
+import Experience from './Experience'
 
 const PageWrapper = styled.div`
   min-height: 100vh;
@@ -40,7 +41,7 @@ const Projects = () => {
           <p>
             Aquí encontrarás una selección de mis proyectos más recientes. Cada uno refleja mi pasión por el desarrollo web y mi compromiso con la calidad.
           </p>
-          <p>Aquí puedes ver algunos de mis proyectos más recientes.</p>
+          <Experience />
         </Content>
       </Container>
       <Footer />

@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import '../styles/home.css'
 import Hero from './home/Hero'
 import Skills from './home/Skills'
+import NavBar from '../components/NavBar'
 
 
 
@@ -12,6 +13,7 @@ const Home = () => {
     <div>
 
       <Header/>
+      
       <Hero/>
       
       <Skills/>
